@@ -23,6 +23,10 @@ Design canvas (screens): https://claude.ai/artifact/UrJAiYBchdX5d2QWn3aYoW
 | Plant database | The teacher uploads an Excel file in the same layout as `Database_1_Final.xlsx`. The app shows the changes and publishes a new version. |
 | AI helper | Behavior per lesson is a teacher setting (instructions, what it can see), versioned. Not hard-coded. |
 | Units | Temperature in °F (database and Arduino agree). |
+| Plant ranges | `Database_1_Final.xlsx` (final version) is the single source of truth, not the worksheet's plant profile. |
+| Research designs | Two: compare two locations for one plant, or compare two plants at one location. |
+| Simulation | Built into the app (replaces the separate tool), using the same plant database. |
+| Roles | AI Expert, Soil Scientist, Water Specialist, Agrometeorologist, Crop Scientist; each variable has a lead role. |
 
 ## 2. Screens (see canvas)
 
@@ -33,10 +37,10 @@ Design canvas (screens): https://claude.ai/artifact/UrJAiYBchdX5d2QWn3aYoW
 | 01 Start Here | 7 | Members + roles, pathway (1 plant × 2 locations or 2 plants × 1 location), plants, locations (approved list + group-added), decision, 2 variables with the 3 checks, research question frame, boundaries. |
 | Plan | 7 | Collection plan builder: variables, interval, duration, IF/THEN rules → live pseudocode → sent to the Arduino. Reliability rules, reasoning, AI planning check. |
 | 02 Data Log | 8–9 | Day × location round blocks. Import session files from the Arduino. Context / problem / solution notes. Quality check, journal, role sign-off. Backup dataset unlockable by teacher. |
-| 03 Clean | 10 | One variable at a time. Auto flag (FAIL, outside plausible range, spike), suggested action, group decision + reason. Raw values never edited. |
-| 04 Summarize | 10–11 | Below / in / above ideal per location, % in ideal, preliminary decision with trade-off. |
+| 03 Clean | 10 | Step 1: agree on 5 cleaning rules (Remove / Review). Step 2: trust each round from its notes (Trust / Use carefully / Remove this round / Not used) with a reason. Steps 3–4: one variable at a time; only flagged rows; auto flag, suggested action, Keep / Remove, reason from a fixed list. Raw values never edited. |
+| 04 Summarize | 10–11 | Step 1: review setup. Step 2 (practice): students write the ideal-range rule from the Plant Profiler and sort 5 sample values by hand; the app checks them. Step 3: the rule is applied to all cleaned data (below / in / above, % in ideal per option). Step 4: decision based on both variables. |
 | Visualize | 12 | Students build their own graph: choose a graph type (line, scatter, bar), drag or tap data cards onto the horizontal axis, vertical axis and "color by". The preview updates live; combinations that don't fit the graph type get an explanation instead of a chart. Required-features checklist (title, fitting type, labeled axes with units, legend), interpretation table, AI feedback. Every graph attempt is logged. |
-| Assess & Revise | 13 | Causal / correlational / comparative predictions tested with the garden model. Assess the model against real data. Revise prediction with reason. |
+| Assess & Revise | 13 | Step 1: data-based claim (from Summarize). Step 2: build a prediction from frames (situation, plant response, evidence) and own words. Step 3: simulate both options side by side (plant appearance, Thriving / Moderate stress / Severe stress, growth fit, limiting variable, 30-day chart across runs). Step 4: evaluate the model (trust rating, reasons, compare with real data). Step 5: stress-test with a real-world scenario (heat wave, dry spell, rainy week). Step 6: final prediction, changed or not, and why. Open to redesign. |
 | Solutions | 14 | Prediction–solution connections, action plan. *(not drawn yet)* |
 | Communicate | 15 | Audience, format, planning template, draft. *(not drawn yet)* |
 | Teacher dashboard | all | Open lessons, group status, alerts, research export. |
@@ -129,7 +133,7 @@ Export: CSV and JSON per class, per group, or per event type.
 
 1. **Login method:** Google sign-in (if the district uses Google Workspace)
    or class code + email + group name.
-2. **Soil moisture units:** sensor reports 0–100 % between dry and saturated
+2. **Soil moisture units** (database is the source of truth, so this still needs a decision): sensor reports 0–100 % between dry and saturated
    calibration points; database uses volumetric water content (≈9–21 %), and
    Hibiscus uses % of field capacity. Choose: recalibrate, convert ranges, or
    teach as a boundary.
