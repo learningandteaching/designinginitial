@@ -28,14 +28,14 @@ Design canvas (screens): https://claude.ai/artifact/UrJAiYBchdX5d2QWn3aYoW
 
 | Tab | Lesson | Purpose |
 |---|---|---|
-| Plant Profiler (public) | 2, 3, 7, 10 | Ideal and survivable ranges per plant and variable. |
+| Plant Profiler (public) | 2, 3, 7, 10 | Ideal and survivable ranges per plant and variable. Shows "Back to our workspace" when opened by a logged-in group, "Group login" otherwise. |
 | Lesson 2 dashboard (public) | 2 | Change one variable, see effects on others (needs the interaction database). |
 | 01 Start Here | 7 | Members + roles, pathway (1 plant × 2 locations or 2 plants × 1 location), plants, locations (approved list + group-added), decision, 2 variables with the 3 checks, research question frame, boundaries. |
 | Plan | 7 | Collection plan builder: variables, interval, duration, IF/THEN rules → live pseudocode → sent to the Arduino. Reliability rules, reasoning, AI planning check. |
 | 02 Data Log | 8–9 | Day × location round blocks. Import session files from the Arduino. Context / problem / solution notes. Quality check, journal, role sign-off. Backup dataset unlockable by teacher. |
 | 03 Clean | 10 | One variable at a time. Auto flag (FAIL, outside plausible range, spike), suggested action, group decision + reason. Raw values never edited. |
 | 04 Summarize | 10–11 | Below / in / above ideal per location, % in ideal, preliminary decision with trade-off. |
-| Visualize | 12 | Graph-ready table, graph builder with required features, interpretation table, AI feedback. *(not drawn yet)* |
+| Visualize | 12 | Students build their own graph: choose a graph type (line, scatter, bar), drag or tap data cards onto the horizontal axis, vertical axis and "color by". The preview updates live; combinations that don't fit the graph type get an explanation instead of a chart. Required-features checklist (title, fitting type, labeled axes with units, legend), interpretation table, AI feedback. Every graph attempt is logged. |
 | Assess & Revise | 13 | Causal / correlational / comparative predictions tested with the garden model. Assess the model against real data. Revise prediction with reason. |
 | Solutions | 14 | Prediction–solution connections, action plan. *(not drawn yet)* |
 | Communicate | 15 | Audience, format, planning template, draft. *(not drawn yet)* |
