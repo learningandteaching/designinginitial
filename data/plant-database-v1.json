@@ -1,0 +1,1483 @@
+{
+ "version": 1,
+ "source": "Database_1_Final.xlsx (draft, to be revised)",
+ "variables": [
+  {
+   "id": "uv",
+   "name": "UV",
+   "unit": "UV index"
+  },
+  {
+   "id": "pm25",
+   "name": "PM2.5",
+   "unit": "ug/m3"
+  },
+  {
+   "id": "air_temp",
+   "name": "Air temperature",
+   "unit": "deg F"
+  },
+  {
+   "id": "air_humidity",
+   "name": "Air humidity",
+   "unit": "% RH"
+  },
+  {
+   "id": "soil_moisture",
+   "name": "Soil moisture",
+   "unit": "% VWC"
+  },
+  {
+   "id": "soil_n",
+   "name": "Soil nitrogen",
+   "unit": "ppm"
+  },
+  {
+   "id": "soil_p",
+   "name": "Soil phosphorus",
+   "unit": "ppm"
+  },
+  {
+   "id": "soil_k",
+   "name": "Soil potassium",
+   "unit": "ppm"
+  },
+  {
+   "id": "water_tds",
+   "name": "Water TDS",
+   "unit": "ppm"
+  },
+  {
+   "id": "water_turbidity",
+   "name": "Water turbidity",
+   "unit": "NTU"
+  }
+ ],
+ "plants": [
+  {
+   "name": "Lettuce",
+   "rules": {
+    "uv": {
+     "absoluteMin": 0,
+     "idealMin": 1,
+     "idealMax": 6,
+     "absoluteMax": 11,
+     "unit": "UV index",
+     "confidence": "low",
+     "context": "Field / outdoor"
+    },
+    "pm25": {
+     "absoluteMin": 0,
+     "idealMin": 0,
+     "idealMax": 9,
+     "absoluteMax": 35,
+     "unit": "ug/m3",
+     "confidence": "low",
+     "context": "All"
+    },
+    "air_temp": {
+     "absoluteMin": 54,
+     "idealMin": 60,
+     "idealMax": 68,
+     "absoluteMax": 82,
+     "unit": "deg F",
+     "confidence": "high",
+     "context": "Field / greenhouse"
+    },
+    "air_humidity": {
+     "absoluteMin": 40,
+     "idealMin": 50,
+     "idealMax": 70,
+     "absoluteMax": 85,
+     "unit": "% RH",
+     "confidence": "high",
+     "context": "Field / greenhouse"
+    },
+    "soil_moisture": {
+     "absoluteMin": 9,
+     "idealMin": 17,
+     "idealMax": 21,
+     "absoluteMax": 21,
+     "unit": "% VWC",
+     "confidence": "high",
+     "context": "Soil — sandy loam"
+    },
+    "soil_n": {
+     "absoluteMin": 0,
+     "idealMin": 20,
+     "idealMax": 30,
+     "absoluteMax": 50,
+     "unit": "ppm",
+     "confidence": "medium",
+     "context": "Soil, top 12 in"
+    },
+    "soil_p": {
+     "absoluteMin": 10,
+     "idealMin": 40,
+     "idealMax": 60,
+     "absoluteMax": 100,
+     "unit": "ppm",
+     "confidence": "high",
+     "context": "Soil, top 12 in"
+    },
+    "soil_k": {
+     "absoluteMin": 100,
+     "idealMin": 150,
+     "idealMax": 250,
+     "absoluteMax": 300,
+     "unit": "ppm",
+     "confidence": "high",
+     "context": "Soil, top 12 in"
+    },
+    "water_tds": {
+     "absoluteMin": 0,
+     "idealMin": 0,
+     "idealMax": 1088,
+     "absoluteMax": 1920,
+     "unit": "ppm",
+     "confidence": "high",
+     "context": "Irrigation (soil)"
+    },
+    "water_turbidity": {
+     "absoluteMin": 0,
+     "idealMin": 0,
+     "idealMax": 5,
+     "absoluteMax": 25,
+     "unit": "NTU",
+     "confidence": "low",
+     "context": "All"
+    }
+   }
+  },
+  {
+   "name": "Tomato",
+   "rules": {
+    "uv": {
+     "absoluteMin": 0,
+     "idealMin": 3,
+     "idealMax": 8,
+     "absoluteMax": 11,
+     "unit": "UV index",
+     "confidence": "low",
+     "context": "Field / outdoor"
+    },
+    "pm25": {
+     "absoluteMin": 0,
+     "idealMin": 0,
+     "idealMax": 9,
+     "absoluteMax": 35,
+     "unit": "ug/m3",
+     "confidence": "low",
+     "context": "All"
+    },
+    "air_temp": {
+     "absoluteMin": 54,
+     "idealMin": 70,
+     "idealMax": 82,
+     "absoluteMax": 90,
+     "unit": "deg F",
+     "confidence": "high",
+     "context": "Field / greenhouse"
+    },
+    "air_humidity": {
+     "absoluteMin": 50,
+     "idealMin": 60,
+     "idealMax": 70,
+     "absoluteMax": 85,
+     "unit": "% RH",
+     "confidence": "high",
+     "context": "Field / greenhouse"
+    },
+    "soil_moisture": {
+     "absoluteMin": 9,
+     "idealMin": 16.2,
+     "idealMax": 21,
+     "absoluteMax": 21,
+     "unit": "% VWC",
+     "confidence": "high",
+     "context": "Soil — sandy loam"
+    },
+    "soil_n": {
+     "absoluteMin": 0,
+     "idealMin": 16,
+     "idealMax": 40,
+     "absoluteMax": 80,
+     "unit": "ppm",
+     "confidence": "medium",
+     "context": "Soil, top 24 in — field extract"
+    },
+    "soil_p": {
+     "absoluteMin": 0,
+     "idealMin": 10,
+     "idealMax": 20,
+     "absoluteMax": 40,
+     "unit": "ppm",
+     "confidence": "high",
+     "context": "Soil, top 24 in — field extract"
+    },
+    "soil_k": {
+     "absoluteMin": 0,
+     "idealMin": 135,
+     "idealMax": 250,
+     "absoluteMax": 400,
+     "unit": "ppm",
+     "confidence": "high",
+     "context": "Soil, top 12-24 in — field extract"
+    },
+    "water_tds": {
+     "absoluteMin": 0,
+     "idealMin": 0,
+     "idealMax": 1088,
+     "absoluteMax": 1920,
+     "unit": "ppm",
+     "confidence": "high",
+     "context": "Irrigation (soil)"
+    },
+    "water_turbidity": {
+     "absoluteMin": 0,
+     "idealMin": 0,
+     "idealMax": 5,
+     "absoluteMax": 25,
+     "unit": "NTU",
+     "confidence": "low",
+     "context": "All"
+    }
+   }
+  },
+  {
+   "name": "Spinach",
+   "rules": {
+    "uv": {
+     "absoluteMin": 0,
+     "idealMin": 1,
+     "idealMax": 6,
+     "absoluteMax": 11,
+     "unit": "UV index",
+     "confidence": "low",
+     "context": "Field / outdoor"
+    },
+    "pm25": {
+     "absoluteMin": 0,
+     "idealMin": 0,
+     "idealMax": 9,
+     "absoluteMax": 35,
+     "unit": "ug/m3",
+     "confidence": "low",
+     "context": "All"
+    },
+    "air_temp": {
+     "absoluteMin": 41,
+     "idealMin": 60,
+     "idealMax": 77,
+     "absoluteMax": 90,
+     "unit": "deg F",
+     "confidence": "high",
+     "context": "Field / greenhouse"
+    },
+    "air_humidity": {
+     "absoluteMin": 40,
+     "idealMin": 50,
+     "idealMax": 70,
+     "absoluteMax": 85,
+     "unit": "% RH",
+     "confidence": "high",
+     "context": "CEA / greenhouse"
+    },
+    "soil_moisture": {
+     "absoluteMin": 9,
+     "idealMin": 18,
+     "idealMax": 21,
+     "absoluteMax": 21,
+     "unit": "% VWC",
+     "confidence": "high",
+     "context": "Soil - sandy loam"
+    },
+    "soil_n": {
+     "absoluteMin": 0,
+     "idealMin": 30,
+     "idealMax": 60,
+     "absoluteMax": 100,
+     "unit": "ppm",
+     "confidence": "medium",
+     "context": "Soil, top 12 in"
+    },
+    "soil_p": {
+     "absoluteMin": 10,
+     "idealMin": 30,
+     "idealMax": 65,
+     "absoluteMax": 100,
+     "unit": "ppm",
+     "confidence": "high",
+     "context": "Soil, top 6-8 in"
+    },
+    "soil_k": {
+     "absoluteMin": 50,
+     "idealMin": 70,
+     "idealMax": 140,
+     "absoluteMax": 300,
+     "unit": "ppm",
+     "confidence": "high",
+     "context": "Soil, top 6-8 in"
+    },
+    "water_tds": {
+     "absoluteMin": 0,
+     "idealMin": 0,
+     "idealMax": 448,
+     "absoluteMax": 832,
+     "unit": "ppm",
+     "confidence": "high",
+     "context": "Irrigation (soil)"
+    },
+    "water_turbidity": {
+     "absoluteMin": 0,
+     "idealMin": 0,
+     "idealMax": 2,
+     "absoluteMax": 10,
+     "unit": "NTU",
+     "confidence": "low",
+     "context": "All"
+    }
+   }
+  },
+  {
+   "name": "Corn",
+   "rules": {
+    "uv": {
+     "absoluteMin": 0,
+     "idealMin": 3,
+     "idealMax": 8,
+     "absoluteMax": 11,
+     "unit": "UV index",
+     "confidence": "low",
+     "context": "Field / outdoor"
+    },
+    "pm25": {
+     "absoluteMin": 0,
+     "idealMin": 0,
+     "idealMax": 15,
+     "absoluteMax": 35,
+     "unit": "ug/m3",
+     "confidence": "medium",
+     "context": "All"
+    },
+    "air_temp": {
+     "absoluteMin": 50,
+     "idealMin": 75,
+     "idealMax": 86,
+     "absoluteMax": 95,
+     "unit": "deg F",
+     "confidence": "high",
+     "context": "Field"
+    },
+    "air_humidity": {
+     "absoluteMin": 30,
+     "idealMin": 50,
+     "idealMax": 80,
+     "absoluteMax": 100,
+     "unit": "% RH",
+     "confidence": "low",
+     "context": "Field, whole season"
+    },
+    "soil_moisture": {
+     "absoluteMin": 9,
+     "idealMin": 15,
+     "idealMax": 21,
+     "absoluteMax": 21,
+     "unit": "% VWC",
+     "confidence": "high",
+     "context": "Soil - sandy loam"
+    },
+    "soil_n": {
+     "absoluteMin": 0,
+     "idealMin": 25,
+     "idealMax": 30,
+     "absoluteMax": 50,
+     "unit": "ppm",
+     "confidence": "high",
+     "context": "Soil, top 12 in, V5-V6"
+    },
+    "soil_p": {
+     "absoluteMin": 5,
+     "idealMin": 16,
+     "idealMax": 20,
+     "absoluteMax": 50,
+     "unit": "ppm",
+     "confidence": "high",
+     "context": "Soil, top 6-8 in"
+    },
+    "soil_k": {
+     "absoluteMin": 30,
+     "idealMin": 86,
+     "idealMax": 120,
+     "absoluteMax": 200,
+     "unit": "ppm",
+     "confidence": "high",
+     "context": "Soil, top 6-8 in"
+    },
+    "water_tds": {
+     "absoluteMin": 0,
+     "idealMin": 0,
+     "idealMax": 448,
+     "absoluteMax": 1088,
+     "unit": "ppm",
+     "confidence": "high",
+     "context": "Irrigation (soil)"
+    },
+    "water_turbidity": {
+     "absoluteMin": 0,
+     "idealMin": 0,
+     "idealMax": 5,
+     "absoluteMax": 25,
+     "unit": "NTU",
+     "confidence": "low",
+     "context": "All"
+    }
+   }
+  },
+  {
+   "name": "Cucumber",
+   "rules": {
+    "uv": {
+     "absoluteMin": 0,
+     "idealMin": 2,
+     "idealMax": 8,
+     "absoluteMax": 11,
+     "unit": "UV index",
+     "confidence": "low",
+     "context": "Field / outdoor"
+    },
+    "pm25": {
+     "absoluteMin": 0,
+     "idealMin": 0,
+     "idealMax": 15,
+     "absoluteMax": 35,
+     "unit": "ug/m3",
+     "confidence": "low",
+     "context": "All"
+    },
+    "air_temp": {
+     "absoluteMin": 65,
+     "idealMin": 75,
+     "idealMax": 80,
+     "absoluteMax": 95,
+     "unit": "deg F",
+     "confidence": "high",
+     "context": "Field / greenhouse"
+    },
+    "air_humidity": {
+     "absoluteMin": 40,
+     "idealMin": 60,
+     "idealMax": 70,
+     "absoluteMax": 80,
+     "unit": "% RH",
+     "confidence": "high",
+     "context": "Field / greenhouse"
+    },
+    "soil_moisture": {
+     "absoluteMin": 9,
+     "idealMin": 17.4,
+     "idealMax": 21,
+     "absoluteMax": 21,
+     "unit": "% VWC",
+     "confidence": "high",
+     "context": "Soil — sandy loam"
+    },
+    "soil_n": {
+     "absoluteMin": 0,
+     "idealMin": 25,
+     "idealMax": 30,
+     "absoluteMax": 40,
+     "unit": "ppm",
+     "confidence": "medium",
+     "context": "Soil, top 12 in"
+    },
+    "soil_p": {
+     "absoluteMin": 0,
+     "idealMin": 40,
+     "idealMax": 65,
+     "absoluteMax": 100,
+     "unit": "ppm",
+     "confidence": "high",
+     "context": "Soil, top 6-7 in"
+    },
+    "soil_k": {
+     "absoluteMin": 0,
+     "idealMin": 125,
+     "idealMax": 250,
+     "absoluteMax": 300,
+     "unit": "ppm",
+     "confidence": "high",
+     "context": "Soil, top 6-7 in"
+    },
+    "water_tds": {
+     "absoluteMin": 0,
+     "idealMin": 0,
+     "idealMax": 448,
+     "absoluteMax": 1088,
+     "unit": "ppm",
+     "confidence": "high",
+     "context": "Irrigation (soil)"
+    },
+    "water_turbidity": {
+     "absoluteMin": 0,
+     "idealMin": 0,
+     "idealMax": 5,
+     "absoluteMax": 50,
+     "unit": "NTU",
+     "confidence": "low",
+     "context": "All"
+    }
+   }
+  },
+  {
+   "name": "Peanut",
+   "rules": {
+    "uv": {
+     "absoluteMin": 0,
+     "idealMin": 6,
+     "idealMax": 10,
+     "absoluteMax": 12,
+     "unit": "UV index",
+     "confidence": "low",
+     "context": "Field / outdoor"
+    },
+    "pm25": {
+     "absoluteMin": 0,
+     "idealMin": 0,
+     "idealMax": 15,
+     "absoluteMax": 35,
+     "unit": "ug/m3",
+     "confidence": "low",
+     "context": "All"
+    },
+    "air_temp": {
+     "absoluteMin": 57,
+     "idealMin": 83,
+     "idealMax": 91,
+     "absoluteMax": 97,
+     "unit": "deg F",
+     "confidence": "high",
+     "context": "Field, reproductive phase"
+    },
+    "air_humidity": {
+     "absoluteMin": 40,
+     "idealMin": 50,
+     "idealMax": 80,
+     "absoluteMax": 95,
+     "unit": "% RH",
+     "confidence": "high",
+     "context": "Field / canopy"
+    },
+    "soil_moisture": {
+     "absoluteMin": 9,
+     "idealMin": 15,
+     "idealMax": 21,
+     "absoluteMax": 21,
+     "unit": "% VWC",
+     "confidence": "high",
+     "context": "Soil - sandy loam"
+    },
+    "soil_n": {
+     "absoluteMin": 0,
+     "idealMin": 0,
+     "idealMax": 20,
+     "absoluteMax": 25,
+     "unit": "ppm",
+     "confidence": "low",
+     "context": "Soil, top 12 in"
+    },
+    "soil_p": {
+     "absoluteMin": 8,
+     "idealMin": 16,
+     "idealMax": 30,
+     "absoluteMax": 60,
+     "unit": "ppm",
+     "confidence": "high",
+     "context": "Soil - Coastal Plain"
+    },
+    "soil_k": {
+     "absoluteMin": 15,
+     "idealMin": 31,
+     "idealMax": 75,
+     "absoluteMax": 90,
+     "unit": "ppm",
+     "confidence": "high",
+     "context": "Soil - Coastal Plain"
+    },
+    "water_tds": {
+     "absoluteMin": 0,
+     "idealMin": 0,
+     "idealMax": 448,
+     "absoluteMax": 1363.2,
+     "unit": "ppm",
+     "confidence": "high",
+     "context": "Irrigation water"
+    },
+    "water_turbidity": {
+     "absoluteMin": 0,
+     "idealMin": 0,
+     "idealMax": 5,
+     "absoluteMax": 50,
+     "unit": "NTU",
+     "confidence": "low",
+     "context": "Irrigation delivery system"
+    }
+   }
+  },
+  {
+   "name": "Bell Pepper",
+   "rules": {
+    "uv": {
+     "absoluteMin": 0,
+     "idealMin": 3,
+     "idealMax": 8,
+     "absoluteMax": 11,
+     "unit": "UV index",
+     "confidence": "low",
+     "context": "Field / outdoor"
+    },
+    "pm25": {
+     "absoluteMin": 0,
+     "idealMin": 0,
+     "idealMax": 9,
+     "absoluteMax": 35,
+     "unit": "ug/m3",
+     "confidence": "low",
+     "context": "All"
+    },
+    "air_temp": {
+     "absoluteMin": 59,
+     "idealMin": 75,
+     "idealMax": 86,
+     "absoluteMax": 90,
+     "unit": "deg F",
+     "confidence": "high",
+     "context": "Field / greenhouse"
+    },
+    "air_humidity": {
+     "absoluteMin": 40,
+     "idealMin": 65,
+     "idealMax": 80,
+     "absoluteMax": 90,
+     "unit": "% RH",
+     "confidence": "medium",
+     "context": "Field / greenhouse"
+    },
+    "soil_moisture": {
+     "absoluteMin": 9,
+     "idealMin": 17,
+     "idealMax": 21,
+     "absoluteMax": 21,
+     "unit": "% VWC",
+     "confidence": "high",
+     "context": "Soil - sandy loam"
+    },
+    "soil_n": {
+     "absoluteMin": 0,
+     "idealMin": 25,
+     "idealMax": 30,
+     "absoluteMax": 40,
+     "unit": "ppm",
+     "confidence": "medium",
+     "context": "Soil, top 12 in"
+    },
+    "soil_p": {
+     "absoluteMin": 10,
+     "idealMin": 50,
+     "idealMax": 75,
+     "absoluteMax": 100,
+     "unit": "ppm",
+     "confidence": "medium",
+     "context": "Soil, top 12 in"
+    },
+    "soil_k": {
+     "absoluteMin": 75,
+     "idealMin": 150,
+     "idealMax": 250,
+     "absoluteMax": 300,
+     "unit": "ppm",
+     "confidence": "medium",
+     "context": "Soil, top 12 in"
+    },
+    "water_tds": {
+     "absoluteMin": 0,
+     "idealMin": 0,
+     "idealMax": 640,
+     "absoluteMax": 960,
+     "unit": "ppm",
+     "confidence": "high",
+     "context": "Irrigation (soil)"
+    },
+    "water_turbidity": {
+     "absoluteMin": 0,
+     "idealMin": 0,
+     "idealMax": 2,
+     "absoluteMax": 5,
+     "unit": "NTU",
+     "confidence": "medium",
+     "context": "Reclaimed / surface water, raw-eaten cro"
+    }
+   }
+  },
+  {
+   "name": "Sunflower",
+   "rules": {
+    "uv": {
+     "absoluteMin": 0,
+     "idealMin": 6,
+     "idealMax": 9,
+     "absoluteMax": 11,
+     "unit": "UV index",
+     "confidence": "low",
+     "context": "Field / outdoor"
+    },
+    "pm25": {
+     "absoluteMin": 0,
+     "idealMin": 0,
+     "idealMax": 9,
+     "absoluteMax": 35,
+     "unit": "ug/m3",
+     "confidence": "low",
+     "context": "All"
+    },
+    "air_temp": {
+     "absoluteMin": 28,
+     "idealMin": 70,
+     "idealMax": 78,
+     "absoluteMax": 91,
+     "unit": "deg F",
+     "confidence": "high",
+     "context": "Field"
+    },
+    "air_humidity": {
+     "absoluteMin": 20,
+     "idealMin": 40,
+     "idealMax": 65,
+     "absoluteMax": 80,
+     "unit": "% RH",
+     "confidence": "low",
+     "context": "Field"
+    },
+    "soil_moisture": {
+     "absoluteMin": 9,
+     "idealMin": 15.6,
+     "idealMax": 21,
+     "absoluteMax": 21,
+     "unit": "% VWC",
+     "confidence": "high",
+     "context": "Soil - sandy loam"
+    },
+    "soil_n": {
+     "absoluteMin": 0,
+     "idealMin": 8.8,
+     "idealMax": 20,
+     "absoluteMax": 25,
+     "unit": "ppm",
+     "confidence": "medium",
+     "context": "Soil"
+    },
+    "soil_p": {
+     "absoluteMin": 6,
+     "idealMin": 11,
+     "idealMax": 21,
+     "absoluteMax": 30,
+     "unit": "ppm",
+     "confidence": "medium",
+     "context": "Soil"
+    },
+    "soil_k": {
+     "absoluteMin": 40,
+     "idealMin": 150,
+     "idealMax": 250,
+     "absoluteMax": 300,
+     "unit": "ppm",
+     "confidence": "medium",
+     "context": "Soil"
+    },
+    "water_tds": {
+     "absoluteMin": 0,
+     "idealMin": 0,
+     "idealMax": 448,
+     "absoluteMax": 2048,
+     "unit": "ppm",
+     "confidence": "high",
+     "context": "Irrigation"
+    },
+    "water_turbidity": {
+     "absoluteMin": 0,
+     "idealMin": 0,
+     "idealMax": 5,
+     "absoluteMax": 100,
+     "unit": "NTU",
+     "confidence": "low",
+     "context": "Irrigation"
+    }
+   }
+  },
+  {
+   "name": "Cabbage",
+   "rules": {
+    "uv": {
+     "absoluteMin": 0,
+     "idealMin": 2,
+     "idealMax": 7,
+     "absoluteMax": 11,
+     "unit": "UV index",
+     "confidence": "low",
+     "context": "Field / outdoor"
+    },
+    "pm25": {
+     "absoluteMin": 0,
+     "idealMin": 0,
+     "idealMax": 9,
+     "absoluteMax": 35,
+     "unit": "ug/m3",
+     "confidence": "low",
+     "context": "All"
+    },
+    "air_temp": {
+     "absoluteMin": 32,
+     "idealMin": 60,
+     "idealMax": 65,
+     "absoluteMax": 75,
+     "unit": "deg F",
+     "confidence": "high",
+     "context": "Field / greenhouse"
+    },
+    "air_humidity": {
+     "absoluteMin": 40,
+     "idealMin": 60,
+     "idealMax": 80,
+     "absoluteMax": 90,
+     "unit": "% RH",
+     "confidence": "low",
+     "context": "Field / greenhouse"
+    },
+    "soil_moisture": {
+     "absoluteMin": 9,
+     "idealMin": 15.6,
+     "idealMax": 21,
+     "absoluteMax": 21,
+     "unit": "% VWC",
+     "confidence": "high",
+     "context": "Soil - sandy loam"
+    },
+    "soil_n": {
+     "absoluteMin": 0,
+     "idealMin": 24,
+     "idealMax": 30,
+     "absoluteMax": 50,
+     "unit": "ppm",
+     "confidence": "high",
+     "context": "Soil, top 12 in, ~14 d after transplant"
+    },
+    "soil_p": {
+     "absoluteMin": 10,
+     "idealMin": 35,
+     "idealMax": 70,
+     "absoluteMax": 100,
+     "unit": "ppm",
+     "confidence": "high",
+     "context": "Soil, top 12 in"
+    },
+    "soil_k": {
+     "absoluteMin": 50,
+     "idealMin": 70,
+     "idealMax": 140,
+     "absoluteMax": 200,
+     "unit": "ppm",
+     "confidence": "high",
+     "context": "Soil, top 12 in"
+    },
+    "water_tds": {
+     "absoluteMin": 0,
+     "idealMin": 0,
+     "idealMax": 426.7,
+     "absoluteMax": 768,
+     "unit": "ppm",
+     "confidence": "high",
+     "context": "Irrigation (soil)"
+    },
+    "water_turbidity": {
+     "absoluteMin": 0,
+     "idealMin": 0,
+     "idealMax": 5,
+     "absoluteMax": 33.3,
+     "unit": "NTU",
+     "confidence": "low",
+     "context": "All"
+    }
+   }
+  },
+  {
+   "name": "Strawberry",
+   "rules": {
+    "uv": {
+     "absoluteMin": 0,
+     "idealMin": 1,
+     "idealMax": 6,
+     "absoluteMax": 11,
+     "unit": "UV index",
+     "confidence": "low",
+     "context": "Field / outdoor"
+    },
+    "pm25": {
+     "absoluteMin": 0,
+     "idealMin": 0,
+     "idealMax": 9,
+     "absoluteMax": 35,
+     "unit": "ug/m3",
+     "confidence": "low",
+     "context": "All"
+    },
+    "air_temp": {
+     "absoluteMin": 50,
+     "idealMin": 68,
+     "idealMax": 77,
+     "absoluteMax": 85,
+     "unit": "deg F",
+     "confidence": "high",
+     "context": "Field / open production"
+    },
+    "air_humidity": {
+     "absoluteMin": 40,
+     "idealMin": 60,
+     "idealMax": 75,
+     "absoluteMax": 85,
+     "unit": "% RH",
+     "confidence": "high",
+     "context": "Field / greenhouse"
+    },
+    "soil_moisture": {
+     "absoluteMin": 9,
+     "idealMin": 18.6,
+     "idealMax": 21,
+     "absoluteMax": 21,
+     "unit": "% VWC",
+     "confidence": "medium",
+     "context": "Soil — sandy loam"
+    },
+    "soil_n": {
+     "absoluteMin": 0,
+     "idealMin": 20,
+     "idealMax": 40,
+     "absoluteMax": 60,
+     "unit": "ppm",
+     "confidence": "medium",
+     "context": "Soil, top 8 in"
+    },
+    "soil_p": {
+     "absoluteMin": 10,
+     "idealMin": 20,
+     "idealMax": 30,
+     "absoluteMax": 50,
+     "unit": "ppm",
+     "confidence": "high",
+     "context": "Soil, top 8 in"
+    },
+    "soil_k": {
+     "absoluteMin": 80,
+     "idealMin": 120,
+     "idealMax": 180,
+     "absoluteMax": 250,
+     "unit": "ppm",
+     "confidence": "high",
+     "context": "Soil, top 8 in"
+    },
+    "water_tds": {
+     "absoluteMin": 0,
+     "idealMin": 0,
+     "idealMax": 448,
+     "absoluteMax": 768,
+     "unit": "ppm",
+     "confidence": "high",
+     "context": "Irrigation (soil)"
+    },
+    "water_turbidity": {
+     "absoluteMin": 0,
+     "idealMin": 0,
+     "idealMax": 5,
+     "absoluteMax": 25,
+     "unit": "NTU",
+     "confidence": "low",
+     "context": "All"
+    }
+   }
+  },
+  {
+   "name": "Watermelon",
+   "rules": {
+    "uv": {
+     "absoluteMin": 0,
+     "idealMin": 5,
+     "idealMax": 10,
+     "absoluteMax": 12,
+     "unit": "UV index",
+     "confidence": "low",
+     "context": "Field / outdoor"
+    },
+    "pm25": {
+     "absoluteMin": 0,
+     "idealMin": 0,
+     "idealMax": 9,
+     "absoluteMax": 35,
+     "unit": "ug/m3",
+     "confidence": "low",
+     "context": "All"
+    },
+    "air_temp": {
+     "absoluteMin": 50,
+     "idealMin": 70,
+     "idealMax": 85,
+     "absoluteMax": 95,
+     "unit": "deg F",
+     "confidence": "high",
+     "context": "Field / high tunnel"
+    },
+    "air_humidity": {
+     "absoluteMin": 30,
+     "idealMin": 50,
+     "idealMax": 70,
+     "absoluteMax": 85,
+     "unit": "% RH",
+     "confidence": "low",
+     "context": "Field / high tunnel"
+    },
+    "soil_moisture": {
+     "absoluteMin": 9,
+     "idealMin": 15,
+     "idealMax": 21,
+     "absoluteMax": 21,
+     "unit": "% VWC",
+     "confidence": "high",
+     "context": "Soil — sandy loam"
+    },
+    "soil_n": {
+     "absoluteMin": 0,
+     "idealMin": 20,
+     "idealMax": 30,
+     "absoluteMax": 50,
+     "unit": "ppm",
+     "confidence": "medium",
+     "context": "Soil, top 12 in"
+    },
+    "soil_p": {
+     "absoluteMin": 10,
+     "idealMin": 26,
+     "idealMax": 45,
+     "absoluteMax": 100,
+     "unit": "ppm",
+     "confidence": "high",
+     "context": "Soil, acidic mineral soils"
+    },
+    "soil_k": {
+     "absoluteMin": 50,
+     "idealMin": 100,
+     "idealMax": 150,
+     "absoluteMax": 250,
+     "unit": "ppm",
+     "confidence": "medium",
+     "context": "Soil, top 12 in"
+    },
+    "water_tds": {
+     "absoluteMin": 0,
+     "idealMin": 0,
+     "idealMax": 448,
+     "absoluteMax": 1088,
+     "unit": "ppm",
+     "confidence": "high",
+     "context": "Irrigation water (soil-grown)"
+    },
+    "water_turbidity": {
+     "absoluteMin": 0,
+     "idealMin": 0,
+     "idealMax": 10,
+     "absoluteMax": 50,
+     "unit": "NTU",
+     "confidence": "low",
+     "context": "All (delivery system)"
+    }
+   }
+  },
+  {
+   "name": "Hibiscus",
+   "rules": {
+    "uv": {
+     "absoluteMin": 0,
+     "idealMin": 6,
+     "idealMax": 9,
+     "absoluteMax": 11,
+     "unit": "UV index",
+     "confidence": "low",
+     "context": "Field / outdoor — both species"
+    },
+    "pm25": {
+     "absoluteMin": 0,
+     "idealMin": 0,
+     "idealMax": 9,
+     "absoluteMax": 35,
+     "unit": "ug/m3",
+     "confidence": "low",
+     "context": "All"
+    },
+    "air_temp": {
+     "absoluteMin": 50,
+     "idealMin": 77,
+     "idealMax": 86,
+     "absoluteMax": 95,
+     "unit": "deg F",
+     "confidence": "high",
+     "context": "Field — roselle (H. sabdariffa)"
+    },
+    "air_humidity": {
+     "absoluteMin": 40,
+     "idealMin": 60,
+     "idealMax": 80,
+     "absoluteMax": 90,
+     "unit": "% RH",
+     "confidence": "low",
+     "context": "Field — roselle (H. sabdariffa)"
+    },
+    "soil_moisture": {
+     "absoluteMin": 25,
+     "idealMin": 70,
+     "idealMax": 100,
+     "absoluteMax": 100,
+     "unit": "% field capacity",
+     "confidence": "high",
+     "context": "Field — roselle (H. sabdariffa)"
+    },
+    "soil_n": {
+     "absoluteMin": 10,
+     "idealMin": 20,
+     "idealMax": 40,
+     "absoluteMax": 80,
+     "unit": "ppm",
+     "confidence": "low",
+     "context": "Soil, top 12 in"
+    },
+    "soil_p": {
+     "absoluteMin": 10,
+     "idealMin": 15,
+     "idealMax": 30,
+     "absoluteMax": 50,
+     "unit": "ppm",
+     "confidence": "medium",
+     "context": "Soil, top 12 in"
+    },
+    "soil_k": {
+     "absoluteMin": 80,
+     "idealMin": 120,
+     "idealMax": 200,
+     "absoluteMax": 250,
+     "unit": "ppm",
+     "confidence": "medium",
+     "context": "Soil, top 12 in"
+    },
+    "water_tds": {
+     "absoluteMin": 0,
+     "idealMin": 0,
+     "idealMax": 448,
+     "absoluteMax": 1920,
+     "unit": "ppm",
+     "confidence": "high",
+     "context": "Irrigation (soil)"
+    },
+    "water_turbidity": {
+     "absoluteMin": 0,
+     "idealMin": 0,
+     "idealMax": 5,
+     "absoluteMax": 25,
+     "unit": "NTU",
+     "confidence": "low",
+     "context": "All"
+    }
+   }
+  },
+  {
+   "name": "Marigold",
+   "rules": {
+    "uv": {
+     "absoluteMin": 0,
+     "idealMin": 3,
+     "idealMax": 8,
+     "absoluteMax": 11,
+     "unit": "UV index",
+     "confidence": "low",
+     "context": "Field / outdoor"
+    },
+    "pm25": {
+     "absoluteMin": 0,
+     "idealMin": 0,
+     "idealMax": 9,
+     "absoluteMax": 35,
+     "unit": "ug/m3",
+     "confidence": "low",
+     "context": "All"
+    },
+    "air_temp": {
+     "absoluteMin": 40,
+     "idealMin": 70,
+     "idealMax": 85,
+     "absoluteMax": 95,
+     "unit": "deg F",
+     "confidence": "medium",
+     "context": "Field / greenhouse"
+    },
+    "air_humidity": {
+     "absoluteMin": 30,
+     "idealMin": 50,
+     "idealMax": 70,
+     "absoluteMax": 85,
+     "unit": "% RH",
+     "confidence": "low",
+     "context": "Field / greenhouse"
+    },
+    "soil_moisture": {
+     "absoluteMin": 9,
+     "idealMin": 15,
+     "idealMax": 21,
+     "absoluteMax": 21,
+     "unit": "% VWC",
+     "confidence": "medium",
+     "context": "Soil — sandy loam"
+    },
+    "soil_n": {
+     "absoluteMin": 5,
+     "idealMin": 15,
+     "idealMax": 30,
+     "absoluteMax": 50,
+     "unit": "ppm",
+     "confidence": "medium",
+     "context": "Soil, top 12 in"
+    },
+    "soil_p": {
+     "absoluteMin": 8,
+     "idealMin": 25,
+     "idealMax": 50,
+     "absoluteMax": 80,
+     "unit": "ppm",
+     "confidence": "medium",
+     "context": "Soil, top 12 in"
+    },
+    "soil_k": {
+     "absoluteMin": 60,
+     "idealMin": 120,
+     "idealMax": 200,
+     "absoluteMax": 300,
+     "unit": "ppm",
+     "confidence": "medium",
+     "context": "Soil, top 12 in"
+    },
+    "water_tds": {
+     "absoluteMin": 0,
+     "idealMin": 0,
+     "idealMax": 768,
+     "absoluteMax": 1920,
+     "unit": "ppm",
+     "confidence": "high",
+     "context": "Irrigation — production"
+    },
+    "water_turbidity": {
+     "absoluteMin": 0,
+     "idealMin": 0,
+     "idealMax": 5,
+     "absoluteMax": 25,
+     "unit": "NTU",
+     "confidence": "low",
+     "context": "All"
+    }
+   }
+  },
+  {
+   "name": "Bluebonnet",
+   "rules": {
+    "uv": {
+     "absoluteMin": 1,
+     "idealMin": 5,
+     "idealMax": 9,
+     "absoluteMax": 11,
+     "unit": "UV index",
+     "confidence": "low",
+     "context": "Field / outdoor"
+    },
+    "pm25": {
+     "absoluteMin": 0,
+     "idealMin": 0,
+     "idealMax": 12,
+     "absoluteMax": 35,
+     "unit": "ug/m3",
+     "confidence": "low",
+     "context": "All — 24-hour mean"
+    },
+    "air_temp": {
+     "absoluteMin": 15,
+     "idealMin": 50,
+     "idealMax": 80,
+     "absoluteMax": 95,
+     "unit": "deg F",
+     "confidence": "medium",
+     "context": "Field; simplified single-row form"
+    },
+    "air_humidity": {
+     "absoluteMin": 15,
+     "idealMin": 40,
+     "idealMax": 70,
+     "absoluteMax": 90,
+     "unit": "% RH",
+     "confidence": "low",
+     "context": "Field — daily mean"
+    },
+    "soil_moisture": {
+     "absoluteMin": 9,
+     "idealMin": 13,
+     "idealMax": 18,
+     "absoluteMax": 21,
+     "unit": "% VWC",
+     "confidence": "medium",
+     "context": "Soil — sandy loam"
+    },
+    "soil_n": {
+     "absoluteMin": 2,
+     "idealMin": 4,
+     "idealMax": 15,
+     "absoluteMax": 25,
+     "unit": "ppm",
+     "confidence": "medium",
+     "context": "Soil, top 6 in"
+    },
+    "soil_p": {
+     "absoluteMin": 4,
+     "idealMin": 10,
+     "idealMax": 25,
+     "absoluteMax": 60,
+     "unit": "ppm",
+     "confidence": "medium",
+     "context": "Soil, top 6 in"
+    },
+    "soil_k": {
+     "absoluteMin": 40,
+     "idealMin": 100,
+     "idealMax": 175,
+     "absoluteMax": 400,
+     "unit": "ppm",
+     "confidence": "medium",
+     "context": "Soil, top 6 in"
+    },
+    "water_tds": {
+     "absoluteMin": 64,
+     "idealMin": 128,
+     "idealMax": 1024,
+     "absoluteMax": 4864,
+     "unit": "ppm",
+     "confidence": "high",
+     "context": "Container / drip-irrigated bedding produ"
+    },
+    "water_turbidity": {
+     "absoluteMin": 0,
+     "idealMin": 0,
+     "idealMax": 5,
+     "absoluteMax": 50,
+     "unit": "NTU",
+     "confidence": "low",
+     "context": "Drip / micro-irrigation"
+    }
+   }
+  },
+  {
+   "name": "Zinnia",
+   "rules": {
+    "uv": {
+     "absoluteMin": 0,
+     "idealMin": 3,
+     "idealMax": 8,
+     "absoluteMax": 11,
+     "unit": "UV index",
+     "confidence": "low",
+     "context": "Field / outdoor"
+    },
+    "pm25": {
+     "absoluteMin": 0,
+     "idealMin": 0,
+     "idealMax": 9,
+     "absoluteMax": 35,
+     "unit": "ug/m3",
+     "confidence": "low",
+     "context": "All"
+    },
+    "air_temp": {
+     "absoluteMin": 50,
+     "idealMin": 70,
+     "idealMax": 85,
+     "absoluteMax": 95,
+     "unit": "deg F",
+     "confidence": "medium",
+     "context": "Field / landscape"
+    },
+    "air_humidity": {
+     "absoluteMin": 25,
+     "idealMin": 40,
+     "idealMax": 70,
+     "absoluteMax": 90,
+     "unit": "% RH",
+     "confidence": "low",
+     "context": "Field / landscape"
+    },
+    "soil_moisture": {
+     "absoluteMin": 9,
+     "idealMin": 15,
+     "idealMax": 21,
+     "absoluteMax": 21,
+     "unit": "% VWC",
+     "confidence": "medium",
+     "context": "Soil - sandy loam"
+    },
+    "soil_n": {
+     "absoluteMin": 5,
+     "idealMin": 10,
+     "idealMax": 25,
+     "absoluteMax": 50,
+     "unit": "ppm",
+     "confidence": "low",
+     "context": "Soil, top 12 in"
+    },
+    "soil_p": {
+     "absoluteMin": 10,
+     "idealMin": 20,
+     "idealMax": 50,
+     "absoluteMax": 100,
+     "unit": "ppm",
+     "confidence": "medium",
+     "context": "Soil, top 12 in, non-calcareous"
+    },
+    "soil_k": {
+     "absoluteMin": 100,
+     "idealMin": 150,
+     "idealMax": 400,
+     "absoluteMax": 800,
+     "unit": "ppm",
+     "confidence": "medium",
+     "context": "Soil, top 12 in"
+    },
+    "water_tds": {
+     "absoluteMin": 0,
+     "idealMin": 0,
+     "idealMax": 1600,
+     "absoluteMax": 2560,
+     "unit": "ppm",
+     "confidence": "high",
+     "context": "Irrigation (soil / field)"
+    },
+    "water_turbidity": {
+     "absoluteMin": 0,
+     "idealMin": 0,
+     "idealMax": 5,
+     "absoluteMax": 25,
+     "unit": "NTU",
+     "confidence": "low",
+     "context": "Irrigation - drip / micro-emitter"
+    }
+   }
+  }
+ ]
+}
